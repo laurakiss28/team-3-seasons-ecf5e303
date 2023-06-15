@@ -15,7 +15,7 @@ namespace levelup
         }
 
         [Test]
-        public void SetPositionShouldUpdateCoordinates()
+        public void InitializePosition()
         {
             Assert.IsNotNull(testObj.SetPosition(5,5));
         }
