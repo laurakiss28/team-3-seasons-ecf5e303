@@ -32,10 +32,10 @@ public class Character
    // public void EnterMap (GameMap map)
    // {}
 
-  // public GetPosition ()
- //  {
-   // return position;
-  // }
+   public string GetPosition ()
+   {
+    return "hello";
+   }
 
  // public void Move(DIRECTION direction)
   //{}
