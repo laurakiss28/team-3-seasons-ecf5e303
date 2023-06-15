@@ -1,13 +1,16 @@
 using Sharprompt;
 using System.Collections;
-namespace levelup.cli;
-class Character
+
+namespace levelup.cli
+{
+public class Character
 {
     public static string name;
     public static string DEFAULT_CHARACTER_NAME = "Player 1";
 
     public Character()
     {
+       name = DEFAULT_CHARACTER_NAME;
     }
 
     public Character(string characterName)
@@ -36,4 +39,5 @@ class Character
 
  // public void Move(DIRECTION direction)
   //{}
+}
 }
