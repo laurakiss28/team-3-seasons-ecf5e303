@@ -16,5 +16,7 @@ Scenario Outline: Move in a direction
     Examples:
 
         | startingPositionX | startingPositionY | direction | startingMoveCount | endingPositionX | endingPositionY | endingMoveCount |
-        | 0                 | 0                 | NORTH     | 10                | 0               | 1               | 11              |
-        | 0 | 0 | SOUTH | 32 | 0 | 0 | 33 |
+        | 8                 | 8                 | EAST     | 10                | 8               | 9               | 11              |
+        | 0 | 0 | EAST | 32 | 0 | 1 | 33 |
+        | 5 | 5 | EAST  | 55 | 5 | 6 | 56 |
+        | 9 | 9 | EAST  | 78 | 9 | 9 | 79 |
