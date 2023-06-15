@@ -77,8 +77,9 @@ namespace LevelUpGame.Test.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Move in a direction")]
         [NUnit.Framework.CategoryAttribute("acceptance")]
-        [NUnit.Framework.TestCaseAttribute("0", "0", "NORTH", "10", "0", "1", "11", null)]
-        [NUnit.Framework.TestCaseAttribute("0", "0", "SOUTH", "32", "0", "0", "33", null)]
+        [NUnit.Framework.TestCaseAttribute("5", "5", "SOUTH", "32", "6", "5", "33", null)]
+        [NUnit.Framework.TestCaseAttribute("9", "9", "SOUTH", "55", "9", "9", "56", null)]
+        [NUnit.Framework.TestCaseAttribute("0", "0", "SOUTH", "34", "1", "0", "35", null)]
         public void MoveInADirection(string startingPositionX, string startingPositionY, string direction, string startingMoveCount, string endingPositionX, string endingPositionY, string endingMoveCount, string[] exampleTags)
         {
             string[] @__tags = new string[] {
