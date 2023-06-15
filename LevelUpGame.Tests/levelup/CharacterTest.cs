@@ -20,6 +20,13 @@ namespace levelup
         {
             Assert.IsNotNull(testObj.GetPosition());
         }
+
+        [Test]
+        public void ReturnName()
+        {            
+            string charName = testObj.GetName();
+            Assert.AreEqual("Player 1", charName);
+        }
     }
 
 }
