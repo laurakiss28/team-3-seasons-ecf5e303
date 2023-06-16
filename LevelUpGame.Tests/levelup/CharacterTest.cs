@@ -24,22 +24,27 @@ namespace levelup
         [Test]
         public void TestInitialName()
         {            
-            string charName = testObj.CreateCharacter();
-            Assert.AreEqual("Player 1", charName);
+            string expected = "Player 1";
+            string actual = testObj.CreateCharacter();
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void TestGivenName()
         {            
-            string charName = testObj.CreateCharacter("Matt");
-            Assert.AreEqual("Matt", charName);
+            string namePassed = "Matt";
+            string expected = namePassed;
+            string actual = testObj.CreateCharacter(namePassed);          
+            Assert.AreEqual(expected, actual);
         }
         [Test]
         public void GetCharacterName()
-        {            
-            testObj.CreateCharacter("Matt");
-            string charName = testObj.GetName();
-            Assert.AreEqual("Matt", charName);
+        {          
+            string charName = "Ida";
+            testObj.CreateCharacter(charName);
+            string expected = charName;
+            string actual = testObj.GetName();
+            Assert.AreEqual(expected, actual);
         }
     }
 
