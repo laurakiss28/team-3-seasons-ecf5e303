@@ -8,49 +8,30 @@ namespace levelup
     public class CharacterTest
     {
         private Character? testObj;
+        string arbitraryName = "Matt";
 
         [SetUp]
         public void SetUp()
         {
-            testObj = new Character();
+            testObj = new Character(arbitraryName);
         }
-
         
-        [Test]
-        public void TestGetPosition()
-        {
-            Position position = testObj.GetPosition(); 
-            int x = position.X;
-            int y = position.Y;
-            Assert.IsNotNull(x);
-            Assert.IsNotNull(y);
-        }
-
-        [Test]
-        public void TestInitialName()
-        {            
-            string expected = "Player 1";
-            string actual = testObj.CreateCharacter();
-            Assert.AreEqual(expected, actual);
-        }
-
         [Test]
         public void TestGivenName()
         {            
-            string namePassed = "Matt";
-            string expected = namePassed;
-            string actual = testObj.CreateCharacter(namePassed);          
+            string expected = arbitraryName;
+            string actual = testObj.Name;          
             Assert.AreEqual(expected, actual);
         }
+        
         [Test]
-        public void GetCharacterName()
-        {          
-            string charName = "Ida";
-            testObj.CreateCharacter(charName);
-            string expected = charName;
-            string actual = testObj.GetName();
+        public void TestInitialPosition()
+        {             
+            int expected = 0;
+            int actual = testObj.moveCount;
             Assert.AreEqual(expected, actual);
         }
+        
     }
 
 }
