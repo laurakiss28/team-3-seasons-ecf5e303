@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using levelup.cli;
+using levelup;
 
 namespace levelup
 {
@@ -16,9 +17,13 @@ namespace levelup
 
         
         [Test]
-        public void IsCharacterInitialized()
+        public void TestGetPosition()
         {
-            Assert.IsNotNull(testObj.GetPosition());
+            Position position = testObj.GetPosition(); 
+            int x = position.X;
+            int y = position.Y;
+            Assert.IsNotNull(x);
+            Assert.IsNotNull(y);
         }
 
         [Test]

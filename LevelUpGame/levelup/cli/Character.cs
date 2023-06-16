@@ -1,5 +1,7 @@
 using Sharprompt;
 using System.Collections;
+using levelup;
+//using Map;
 
 namespace levelup.cli
 {
@@ -30,12 +32,16 @@ public class Character
       //  )
     }
 
-   // public void EnterMap (GameMap map)
-   // {}
+    public void EnterMap (Map map)
+    {
 
-   public string GetPosition ()
+    }
+
+   public Position GetPosition ()
    {
-    return "hello";
+    // Update later to pull from Game Map
+    Position position = new Position(2, 3);
+    return position;
    }
 
  // public void Move(DIRECTION direction)
