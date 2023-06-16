@@ -34,6 +34,13 @@ namespace levelup
             string charName = testObj.CreateCharacter("Matt");
             Assert.AreEqual("Matt", charName);
         }
+        [Test]
+        public void GetCharacterName()
+        {            
+            testObj.CreateCharacter("Matt");
+            string charName = testObj.GetName();
+            Assert.AreEqual("Matt", charName);
+        }
     }
 
 }
