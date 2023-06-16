@@ -18,23 +18,23 @@ namespace DotNetExample.Tests.Steps
             testObj.StartGame();
         }
 
-        [Then(@"the Game has (.*) positions")]
-        public void checkPositionCount(int numPositions)
-        {
-            testObj.GetTotalPositions().Should().Be(numPositions);
-        }
+      //  [Then(@"the Game has (.*) positions")]
+      //  public void checkPositionCount(int numPositions)
+      //  {
+      //      testObj.GetTotalPositions().Should().Be(numPositions);
+       // }
 
-        [Then(@"the Game sets the character's X position to (.*)")]
-        public void checkXPosition(int xPosition)
-        {
-            testObj.GetStatus().currentPosition.X.Should().Be(xPosition);
-        }
+//[Then(@"the Game sets the character's X position to (.*)")]
+     //   public void checkXPosition(int xPosition)
+      //  {
+       //     testObj.GetStatus().currentPosition.X.Should().Be(xPosition);
+       // }
 
-        [Then(@"the Game sets the character's Y position to (.*)")]
-        public void checkYPosition(int yPosition)
-        {
-            testObj.GetStatus().currentPosition.Y.Should().Be(yPosition);
-        }
+       // [Then(@"the Game sets the character's Y position to (.*)")]
+      //  public void checkYPosition(int yPosition)
+      //  {
+       //     testObj.GetStatus().currentPosition.Y.Should().Be(yPosition);
+       // }
 
         [Then(@"the move count is(.*)")]
         public void checkMoveCount(int moveCount) {

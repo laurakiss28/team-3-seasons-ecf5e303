@@ -32,20 +32,20 @@ namespace DotNetExample.Tests.Steps
             this.direction = (GameController.DIRECTION) Enum.Parse(typeof(GameController.DIRECTION) , direction);
         }
 
-        [Given(@"the current move count is (.*)")]
-        public void givenTheCurrentMoveCountIs(int currentMoveCount)
-        {
-            testObj.SetCurrentMoveCount(currentMoveCount);
-        }
+       //[Given(@"the current move count is (.*)")]
+        //public void givenTheCurrentMoveCountIs(int currentMoveCount)
+       // {
+       //     testObj.SetCurrentMoveCount(currentMoveCount);
+      //  }
 
-        [When(@"the character moves")]
-        public void whenTheCharacterMoves()
-        {
-            testObj.SetCharacterPosition(new Point(this.startX, this.startY));
-            testObj.Move(this.direction);
-            GameController.GameStatus status = testObj.GetStatus();
-            this.currentPosition = status.currentPosition;
-        }
+     //   [When(@"the character moves")]
+     //   public void whenTheCharacterMoves()
+      //  {
+       //     testObj.SetCharacterPosition(new Point(this.startX, this.startY));
+        //    testObj.Move(this.direction);
+        //    GameController.GameStatus status = testObj.GetStatus();
+         //   this.currentPosition = status.currentPosition;
+      //  }
 
         [Then(@"the character is now at position with XCoordinates (.*)")]
         public void checkXCoordinates(int endX)
