@@ -6,17 +6,18 @@ namespace levelup.cli
 public class Character
 {
     public static string name;
-    public static string DEFAULT_CHARACTER_NAME = "Player 1";
+    public const string DEFAULT_CHARACTER_NAME = "Player 1";
 
-    public Character()
+    public string CreateCharacter(string characterName = DEFAULT_CHARACTER_NAME)
     {
-       name = DEFAULT_CHARACTER_NAME;
+       name = characterName;
+       return name;
     }
 
-    public Character(string characterName)
-    {
-        name = characterName;
-    }
+    //public Character(string characterName)
+    //{
+    //    name = characterName;
+    //}
 
     public string GetName()
     {
