@@ -1,7 +1,7 @@
 
 namespace levelup
 {
-    public class FakeGameMap : Map
+    public class FakeGameMap : cli.Map
     {
         public Position stubbedPosition = new Position(3,4);
 

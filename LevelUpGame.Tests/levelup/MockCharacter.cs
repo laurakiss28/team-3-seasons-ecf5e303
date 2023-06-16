@@ -1,7 +1,7 @@
 
 namespace levelup
 {
-    public class MockCharacter : Character
+    public class MockCharacter : cli.Character
     {
         public GameController.DIRECTION? lastDirectionCalled;
         public int timesCalled = 0;
