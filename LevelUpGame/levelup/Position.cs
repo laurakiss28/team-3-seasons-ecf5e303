@@ -3,20 +3,18 @@ namespace levelup
     public class Position
     {
 
-        // Properties
-        public int X { get; private set; }
-        public int Y { get; private set; }
+         public int x { get; set; }
+        public int y { get; set; }
 
-        // Constructor
         public Position(int x, int y)
         {
-            X = x;
-            Y = y;
+            this.x = x;
+            this.y = y;
         }
 
-        public Position()
+         public Position()
         {
-
+           
         }
 
 
@@ -24,10 +22,10 @@ namespace levelup
         // Methods
         public int SetPosition(int x, int y)
         {
-            X = x;
-            Y = y;
+            x = x;
+            y = y;
 
-            return X;
+            return x;
         }
     }
 }

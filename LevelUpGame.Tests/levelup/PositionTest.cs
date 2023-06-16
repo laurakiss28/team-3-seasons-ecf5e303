@@ -23,15 +23,15 @@ namespace levelup
         public void SetPosition()
         {
             //Position position = new Position(2, 3);
-            int newX = 2;
-            int newY = 4;
+            int newX = 0;
+            int newY = 0;
 
             // Act
             testObj.SetPosition(newX, newY);
 
             // Assert
-            Assert.AreEqual(newX, testObj.X);
-            Assert.AreEqual(newY, testObj.Y);
+            Assert.AreEqual(newX, testObj.x);
+            Assert.AreEqual(newY, testObj.y);
         }
     }
 }
