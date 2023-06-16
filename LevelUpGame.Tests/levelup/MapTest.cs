@@ -31,7 +31,10 @@ namespace levelup
         [Test]
         public void CalculateNewPosition()
         {
-            Assert.AreEqual(testPosition,testObj.CalculateNewPosition(testPosition, GameController.DIRECTION.NORTH));
+            Position expected = testPosition;
+            Position actual = testObj.CalculateNewPosition(testPosition, GameController.DIRECTION.NORTH);
+            Assert.AreEqual(expected.x, actual.x);
+            Assert.AreEqual(expected.y, actual.y);
         }
 
         [Test]
