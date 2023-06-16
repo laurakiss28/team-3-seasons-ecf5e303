@@ -1,7 +1,6 @@
 using Sharprompt;
 using System.Collections;
 using levelup;
-//using Map;
 
 namespace levelup.cli
 {
@@ -9,7 +8,7 @@ namespace levelup.cli
   {   
     public string? Name { get; set; }
     public Position? Position { get; set; }
-    //public Map? map { get; set; }
+    public Map? map { get; set; }
 
     public int moveCount { get; set; }
     public const string DEFAULT_CHARACTER_NAME = "Player 1";
@@ -20,22 +19,22 @@ namespace levelup.cli
         this.moveCount = 0;
       }
 
-      //public void EnterMap (Map map)
-      //{
-      //  this.map = map;
-      //  this.Position = map.startingPosition;
-      //}
+      public void EnterMap (Map map)
+      {
+        this.map = map;
+        this.Position = map.startingPosition;
+      }
 
-    //public virtual void Move(GameController.DIRECTION direction)
-    //  {
-    //    if (this.gameMap != null)
-    //    {
-    //      this.Position = gameMap.CalculateNewPosition(this.Position, direction);
-    //      this.moveCount+=1;
-    //  }
-    //  else {
-    //  this.Position = null;
-    //  }
-    // }
+      public virtual void Move(GameController.DIRECTION direction)
+      {
+        if (this.map != null)
+        {
+          this.Position = map.CalculateNewPosition(this.Position, direction);
+          this.moveCount+=1;
+        }
+        else {
+          this.Position = null;
+        }
+      }
   }
 }
