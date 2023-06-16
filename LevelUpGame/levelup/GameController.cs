@@ -79,6 +79,7 @@ namespace levelup
             character.moveCount = moveCount;
             this.status.moveCount = character.moveCount;
         }
+       
 
     }
 }

@@ -19,22 +19,22 @@ namespace levelup.cli
         this.moveCount = 0;
       }
 
-      //public void EnterMap (Map map)
-      //{
-      //  this.map = map;
-      //  this.Position = map.startingPosition;
-      //}
+      public void EnterMap (Map map)
+    {
+        this.map = map;
+        this.Position = map.startingPosition;
+      }
 
-    //public virtual void Move(GameController.DIRECTION direction)
-    //  {
-    //    if (this.gameMap != null)
-    //    {
-    //      this.Position = gameMap.CalculateNewPosition(this.Position, direction);
-    //      this.moveCount+=1;
-    //  }
-    //  else {
-    //  this.Position = null;
-    //  }
-    // }
+    public virtual void Move(GameController.DIRECTION direction)
+      {
+       if (this.map != null)
+      {
+          this.Position = map.CalculateNewPosition(this.Position, direction);
+        this.moveCount+=1;
+      }
+     else {
+      this.Position = null;
+      }
+     }
   }
 }
